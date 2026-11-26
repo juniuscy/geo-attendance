@@ -1,8 +1,8 @@
-import { registerRootComponent } from 'expo';
+// The background geofence task must be defined before anything else loads,
+// so the phone can run it even when the app is closed.
+import './src/attendance';
 
+import { registerRootComponent } from 'expo';
 import App from './App';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
 registerRootComponent(App);
